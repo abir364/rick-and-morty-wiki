@@ -7,8 +7,6 @@ import Home from './pages/Home';
 import SharedLayout from './pages/SharedLayout';
 //import Character from './Character''
 
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
 import './App.css';
 
 const App = () => {

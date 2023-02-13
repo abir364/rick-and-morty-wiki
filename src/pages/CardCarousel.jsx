@@ -1,16 +1,21 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import CharacterCard from "./CharacterCard";
+import ViewAll from "./ViewAll";
 
 import Slider from "react-slick";
 
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import './CardCarousel.css';
 
 const CardCarousel = ({ characters }) => {
     var settings = {
         dots: false,
         infinite: false,
         speed: 500,
-        slidesToShow: 5.5,
+        slidesToShow: 7.5,
         slidesToScroll: 1,
         initialSlide: 0,
         responsive: [
@@ -50,6 +55,9 @@ const CardCarousel = ({ characters }) => {
                     )
                 )
             }
+            <Link to="/characters">
+                <ViewAll />
+            </Link>
         </Slider >
 
     );

@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 import CardCarousel from "./CardCarousel";
 import Episodes from "./Episodes";
+import ViewAll from "./ViewAll";
 
 import './Home.css';
 
@@ -30,12 +31,15 @@ const Home = () => {
     // renders whatever in there
     return (
         <div className="home">
-            
-            <Link to="/characters" className="btn"><button> View All</button></Link>
+            <div className="cast-title">
+                <h3>Meet the cast</h3>
+                <Link to="/characters" className="btn"><button className="view-all"> View All</button></Link>
+            </div>
             <div className="carousel">
                 <CardCarousel characters={characters} />
             </div>
-            <div className="episodes">
+            <div className="episodes-carousels">
+                <h3>Episodes</h3>
                 <Episodes />
             </div>
         </div>

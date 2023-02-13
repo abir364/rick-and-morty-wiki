@@ -7,7 +7,7 @@ import './SharedLayout.css';
 const SharedLayout = () => {
     return (
         <div className="shared">
-            <Link to="/"><img src="src\assets\Logo.png" alt="Logo"/></Link>
+            <Link to="/"><img className='logo' src="src\assets\Logo.png" alt="Logo"/></Link>
             <Outlet />
         </div>
     );

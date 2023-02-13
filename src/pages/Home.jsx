@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 import CardCarousel from "./CardCarousel";
 import Episodes from "./Episodes";
-import ViewAll from "./ViewAll";
+import Locations from "./Locations";
 
 import './Home.css';
 
@@ -41,6 +41,10 @@ const Home = () => {
             <div className="episodes-carousels">
                 <h3>Episodes</h3>
                 <Episodes />
+            </div>
+            <div className="episodes-carousels">
+                <h3>Locations</h3>
+                <Locations />
             </div>
         </div>
 

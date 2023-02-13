@@ -18,6 +18,7 @@ const CardCarousel = ({ characters }) => {
         slidesToShow: 7.5,
         slidesToScroll: 1,
         initialSlide: 0,
+        swipeToSlide: true,
         responsive: [
             {
                 breakpoint: 1024,

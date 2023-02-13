@@ -25,10 +25,3 @@
     border-color: transparent transparent var(--blue) transparent;
 }
 
-.character .card-image {
-    padding-bottom: 10px;
-    height: 160px;
-    width: 170px;
-    margin-top: 0;
-    margin-bottom: 0;
-}

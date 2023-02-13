@@ -34,28 +34,16 @@
     height: 0;
     border-style: solid;
     border-width: 0 0 30px 30px;
-    border-color: transparent transparent #14D9E5 transparent;
+    border-color: transparent transparent var(--blue) transparent;
 }
 
-.container {
-    width: 95vw;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding-bottom: 20px;
-    justify-content: space-around;
-}
-
-.search {
-    width: 90%;
-    padding: 10px;
-}
 
 .char-text {
     width: 130px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    padding-top: 10px;
 }
 
 .carousel .slick-prev {

@@ -3,27 +3,27 @@ import React from "react";
 
 import Slider from "react-slick";
 
-import EpisodeCard from "./EpisodeCard";
+import LocationCard from "./LocationCard";
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import './Episodes.css'
+import './Locations.css'
 
 const API_URL = "https://rickandmortyapi.com/api";
 
-const Episodes = () => {
+const Locations = () => {
 
-    const [episodes, setEpisodes] = useState([]);
+    const [locations, setLocations] = useState([]);
 
-    const getEpisode = async (id) => {
-        const response = await fetch(`${API_URL}/episode/?page=${id}`);
+    const getLocations = async (id) => {
+        const response = await fetch(`${API_URL}/location/?page=${id}`);
         const data = await response.json();
-        setEpisodes(data.results);
+        setLocations(data.results);
     };
 
     // run on page load
     useEffect(() => {
-        getEpisode(1);
+        getLocations(1);
     }, []);
 
     var settings = {
@@ -63,11 +63,11 @@ const Episodes = () => {
     }
 
     return (
-        <div className="episodes">
+        <div className="locations">
             <Slider {...settings}>{
-                episodes.map(
-                    (episode) => (
-                        <EpisodeCard ep={episode} />
+                locations.map(
+                    (location) => (
+                        <LocationCard locale={location} />
                     )
                 )
             }</Slider>
@@ -76,4 +76,4 @@ const Episodes = () => {
     );
 }
 
-export default Episodes;
+export default Locations;

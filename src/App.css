@@ -17,6 +17,25 @@
   font-family: TTT;
 }
 
+.home-page-bg {
+  background-image: url('./assets/homepage/Background.png'),
+  url('./assets/homepage/Spiral.png'), url('./assets/homepage/Star.png');
+  background-position: top, bottom right, bottom;
+  background-repeat: no-repeat;
+}
+
+.cast-details-bg {
+  background-image: url('./assets/cast-details/Background.png'),
+  url('./assets/cast-details/Star.png');
+  background-repeat: no-repeat;
+}
+
+.characters-page-bg {
+  background-image: url('./assets/cast/Background.png'),
+  url('./assets/cast/Star.png');
+  background-repeat: no-repeat;
+}
+
 body {
   background-color: var(--background);
   color: var(--font-color);

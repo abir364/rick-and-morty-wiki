@@ -1,55 +1,60 @@
-import React from 'react';
-import { Link, useParams } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import { Link,useLocation } from 'react-router-dom';
 
+import status from '../assets/cast-details/Icons/PNG/Status.png';
+import species from "../assets/cast-details/Icons/PNG/Species.png";
+import gender from "../assets/cast-details/Icons/PNG/Gender.png";
+import origin from "../assets/cast-details/Icons/PNG/origin.png";
+import re from "../assets/cast-details/Icons/PNG/Redirect.png";
+import loc from "../assets/cast-details/Icons/PNG/Location.png";
+// import epi from "../assets/cast-details/Icons/PNG/Episode(s).png";
 import './Character.css';
 
-const API_URL = "https://rickandmortyapi.com/api";
-
 const Character = () => {
-    // const cast = {
-    //     "id": 1,
-    //     "name": "Rick Sanchez",
-    //     "status": "Alive",
-    //     "species": "Human", "type": "",
-    //     "gender": "Male",
-    //     "origin": { "name": "Earth (C-137)", "url": "https://rickandmortyapi.com/api/location/1" },
-    //     "location": { "name": "Citadel of Ricks", "url": "https://rickandmortyapi.com/api/location/3" },
-    //     "image": "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
-    //     "episode": ["https://rickandmortyapi.com/api/episode/1", "https://rickandmortyapi.com/api/episode/2", "https://rickandmortyapi.com/api/episode/3", "https://rickandmortyapi.com/api/episode/4", "https://rickandmortyapi.com/api/episode/5", "https://rickandmortyapi.com/api/episode/6", "https://rickandmortyapi.com/api/episode/7", "https://rickandmortyapi.com/api/episode/8", "https://rickandmortyapi.com/api/episode/9", "https://rickandmortyapi.com/api/episode/10", "https://rickandmortyapi.com/api/episode/11", "https://rickandmortyapi.com/api/episode/12", "https://rickandmortyapi.com/api/episode/13", "https://rickandmortyapi.com/api/episode/14", "https://rickandmortyapi.com/api/episode/15", "https://rickandmortyapi.com/api/episode/16", "https://rickandmortyapi.com/api/episode/17", "https://rickandmortyapi.com/api/episode/18", "https://rickandmortyapi.com/api/episode/19", "https://rickandmortyapi.com/api/episode/20", "https://rickandmortyapi.com/api/episode/21", "https://rickandmortyapi.com/api/episode/22", "https://rickandmortyapi.com/api/episode/23", "https://rickandmortyapi.com/api/episode/24", "https://rickandmortyapi.com/api/episode/25", "https://rickandmortyapi.com/api/episode/26", "https://rickandmortyapi.com/api/episode/27", "https://rickandmortyapi.com/api/episode/28", "https://rickandmortyapi.com/api/episode/29", "https://rickandmortyapi.com/api/episode/30", "https://rickandmortyapi.com/api/episode/31", "https://rickandmortyapi.com/api/episode/32", "https://rickandmortyapi.com/api/episode/33", "https://rickandmortyapi.com/api/episode/34", "https://rickandmortyapi.com/api/episode/35", "https://rickandmortyapi.com/api/episode/36", "https://rickandmortyapi.com/api/episode/37", "https://rickandmortyapi.com/api/episode/38", "https://rickandmortyapi.com/api/episode/39", "https://rickandmortyapi.com/api/episode/40", "https://rickandmortyapi.com/api/episode/41", "https://rickandmortyapi.com/api/episode/42", "https://rickandmortyapi.com/api/episode/43", "https://rickandmortyapi.com/api/episode/44", "https://rickandmortyapi.com/api/episode/45", "https://rickandmortyapi.com/api/episode/46", "https://rickandmortyapi.com/api/episode/47", "https://rickandmortyapi.com/api/episode/48", "https://rickandmortyapi.com/api/episode/49", "https://rickandmortyapi.com/api/episode/50", "https://rickandmortyapi.com/api/episode/51"],
-    //     "url": "https://rickandmortyapi.com/api/character/1",
-    //     "created": "2017-11-04T18:48:46.250Z"
-    // };
-
-    const { characterId } = useParams();
+    // let { ca } = useParams();
+    // console.log(ca);
+    let url = "";
 
     const [cast, setCast] = useState({});
+    const [id, setId] = useState(useParams().ca);
 
-    // console.log(characterId);
+    const [ori, setOri] = useState("");
+    const [local, setLocal] = useState("");
+    const [ep, setEp] = useState([]);
 
-    const getCast = async (id) => {
-        const response = await fetch(`${API_URL}/character/${id}`);
-        const data = await response.json();
-        // console.log(data);
-        setCast(data);
-
+    const fetchData = async () => {
+        const response = await fetch(url);
+        const json = await response.json();
+        // console.log(json);
+        // console.log("fdsf",(json));
+        setCast(json);
+        setOri(json.origin.name);
+        setLocal(json.location.name);
+        setEp(json.episode);
     };
 
+    // console.log("sad",ca);
+    // url = "https://rickandmortyapi.com/api/character/"+ca;
+    // fetchData();
+    const lt = useLocation();
+    console.log(lt.pathname);
+
     useEffect(() => {
-        getCast(characterId);
-    }, {});
+        // console.log("init" + id);
+        url = "https://rickandmortyapi.com/api/character/" + id;
+        fetchData();
 
-    // const getEpisodeName = async (url) => {
-    //         const r = await fetch(url);
-    //         const name = await r.json();
+        // console.log("sdas", cast);
+    }, [id]);
+    // console.log("last-ca",useParams());
 
-    //         return name;
-    // }
+
+
 
     return (
         <div>
             <Link to="/characters"><button className='back-button'>&#x3c;</button></Link>
-            {/* <div>{cast.name}</div> */}
 
             <div className='wrapper'>
                 <div className="left-wrapper">
@@ -58,55 +63,55 @@ const Character = () => {
                 </div>
                 <div className="right-wrapper">
                     <div className="small-box">
-                        <img src="src\assets\cast-details\Icons\PNG\Status.png" alt="status" />
+                        <img src={status} alt="status" />
                         <span>Status</span>
                         <h2>{cast.status}</h2>
                     </div>
                     <div className="small-box">
-                        <img src="src\assets\cast-details\Icons\PNG\Species.png" alt="species" />
+                        <img src={species} alt="species" />
                         <span>Species</span>
                         <h2>{cast.species}</h2>
                     </div>
                     <div className="small-box">
-                        <img src="src\assets\cast-details\Icons\PNG\Gender.png" alt="gender" />
+                        <img src={gender} alt="gender" />
                         <span>Gender</span>
                         <h2>{cast.gender}</h2>
                     </div>
                     <div className='origin'>
                         <div className="first-line">
-                            <img src="src\assets\cast-details\Icons\PNG\origin.png" alt="origin" />
-                            <img src="src\assets\cast-details\Icons\PNG\Redirect.png" alt="redirect" />
+                            <img src={origin} alt="origin" />
+                            <img src={re} alt="redirect" />
                         </div>
                         <span>Origin</span>
-                        {/* <h2>{cast && cast.origin.name}</h2> */}
+                        <h2>{ori}</h2>
                     </div>
                     <div className='last-loc'>
                         <div className="first-line">
-                            <img src="src\assets\cast-details\Icons\PNG\origin.png" alt="last" />
-                            <img src="src\assets\cast-details\Icons\PNG\Redirect.png" alt="redirect" />
+                            <img src={loc} alt="last" />
+                            <img src={re} alt="redirect" />
                         </div>
                         <span>Last Known Location</span>
-                        {/* <h2>{cast && cast.location.name}</h2> */}
+                        <h2>{local}</h2>
                     </div>
                     <div className="scroll-box">
-                        <img src="src\assets\cast-details\Icons\PNG\origin.png" alt="episodes" />
-                        <span>Episode(S)</span>
+                        <h3>Episode(S)</h3>
                         <div className="list">
                             {
-                                cast && cast.episode.map(
+                                ep.map(
                                     (c) => (
                                         <h2>●{c}</h2>
                                     )
                                 )
                             }
                         </div>
-                        {/* <h2>{cast.episode[0]}</h2> */}
+
                     </div>
                 </div>
             </div>
-        </div>
 
-    );
+
+        </div>
+    )
 }
 
-export default Character;
+export default Character

@@ -57,10 +57,15 @@
     border-image: linear-gradient(90deg, var(--blue), var(--green)) 1;
 }
 
-/* .small-box img {
-    height: 100px;
-    width: 100px;
-} */
+.small-box img, .origin img, .last-loc img {
+    height: 30px;
+    width: 30px;
+}
+
+.scroll-box img {
+    height: 20px;
+    width: 60px;
+}
 
 .first-line {
     display: flex;

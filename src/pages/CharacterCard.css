@@ -1,0 +1,34 @@
+.character {
+    border-style: solid;
+    border-width: 1px;
+    border-image: linear-gradient(135deg, var(--green), var(--blue)) 1;
+    padding: 20px;
+    font-family: TTT;
+    clip-path: polygon(100% 0, 100% 80%, 82.5% 100%, 0 100%, 0 0);
+}
+
+.character {
+    background-color: rgba(207, 211, 200, 0.1);
+    position: relative;
+    max-width: 320px;
+}
+
+.character::after {
+    content: "";
+    position: absolute;
+    bottom:0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 65px 50px;
+    border-color: transparent transparent #14D9E5 transparent;
+}
+
+.character .card-image {
+    padding-bottom: 10px;
+    height: 160px;
+    width: 170px;
+    margin-top: 0;
+    margin-bottom: 0;
+}

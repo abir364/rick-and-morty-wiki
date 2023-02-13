@@ -1,6 +1,6 @@
 @font-face {
   font-family: TTT;
-  src: url(src\Font\TTTravels-Regular.ttf)
+  src: url(./Font/TTTravels-Regular.ttf);
 }
 
 :root {
@@ -14,11 +14,43 @@
   border: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: TTT;
 }
 
 body {
   background-color: var(--background);
   color: var(--font-color);
-  font-family: TTT-light;
 }
 
+
+.slick-slider .slick-list, .slick-slider .slick-track {
+  -webkit-transform: translate3d(0,0,0);
+  -moz-transform: translate3d(0,0,0);
+  -ms-transform: translate3d(0,0,0);
+  -o-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);;
+}
+
+.slick-slider {
+  width: 90vw;
+  height: 210px;
+}
+
+.carousel {
+  padding: 20px;
+}
+
+.slick-next.slick-disabled:before, .slick-prev.slick-disabled:before {
+  display: none;
+}
+
+/* .slick-list .slick-track{
+  padding-left: 10%;
+} */
+
+.slick-next:before, .slick-prev:before {
+  font-size: 40px;
+  line-height: 1;
+  opacity: .75;
+  color: #ffffff;
+}

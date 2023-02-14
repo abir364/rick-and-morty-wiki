@@ -45,6 +45,7 @@
     .episode {
         padding: 10px;
         max-width: 155px;
+        grid-template-columns: auto;
     }
     
     .episode {

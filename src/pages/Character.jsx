@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Link,useLocation } from 'react-router-dom';
 
+import EpisodeList from './EpisodeList';
+
 import status from '../assets/cast-details/Icons/PNG/Status.png';
 import species from "../assets/cast-details/Icons/PNG/Species.png";
 import gender from "../assets/cast-details/Icons/PNG/Gender.png";
@@ -21,7 +23,6 @@ const Character = () => {
     const [cast, setCast] = useState({});
     const [id, setId] = useState(useParams().ca);
 
-    // const [epn, setEpn] = useState("");
 
     const [ori, setOri] = useState("");
     const [local, setLocal] = useState("");
@@ -38,24 +39,16 @@ const Character = () => {
         setEp(json.episode);
     };
 
-    // const fetchEpn = async (api) => {
-    //     const epnResponse = await fetch(api);
-    //     const value = await epnResponse.json();
-    //     console.log(value);
-    //     // setEpn();
-    // };
-
     // console.log("sad",ca);
     // url = "https://rickandmortyapi.com/api/character/"+ca;
     // fetchData();
     const lt = useLocation();
-    console.log(lt.pathname);
+    // console.log(lt.pathname);
 
     useEffect(() => {
         // console.log("init" + id);
         url = "https://rickandmortyapi.com/api/character/" + id;
         fetchData();
-
         // console.log("sdas", cast);
     }, [id]);
     // console.log("last-ca",useParams());
@@ -71,10 +64,12 @@ const Character = () => {
                 
             </div>
             <div className='wrapper'>
+                <h1 className='vertical'>{cast.name}</h1>
                 <div className="left-wrapper">
                     <h1 className='profile-name'>{cast.name}</h1>
                     <img className='profile-pic' src={cast.image} alt={cast.name} />
                 </div>
+                <div className='vertical-line'></div>
                 <div className="right-wrapper">
                     <div className="small-box">
                         <img src={status} alt="status" />
@@ -109,16 +104,15 @@ const Character = () => {
                     </div>
                     <div className="scroll-box">
                         <h3>Episode(S)</h3>
-                        <div className="list">
+                        <div className='list'>
                             {
                                 ep.map(
                                     (c) => (
-                                        <h2>●{c}</h2>
+                                        <EpisodeList link={c}/>
                                     )
                                 )
                             }
                         </div>
-
                     </div>
                 </div>
             </div>

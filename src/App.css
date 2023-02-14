@@ -35,6 +35,7 @@
   background-image: url('./assets/cast/Background.png'),
   url('./assets/cast/Star.png');
   background-repeat: no-repeat;
+  background-position: top, bottom;
 }
 
 body {

@@ -77,6 +77,10 @@
     justify-content: space-between;
 }
 
+.scroll-box h3{
+    padding-bottom: 1rem;
+}
+
 .list {
     overflow:scroll;
     height:380px;
@@ -94,9 +98,34 @@
     background-color: var(--blue);
 }
 
+.list h2 {
+    padding: 3px;
+}
+
 .home {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+.vertical-line {
+    background-color: var(--green);
+    width: 1px;
+    height: 50vh;
+}
+
+.vertical {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    /* font-size: 128px; */
+    
+    font-weight: 800;
+    text-transform: uppercase;
+    /* Warning: no fallback */
+    
+    background: -webkit-linear-gradient(-86deg, -var(--green) 53%, var(--blue) 91%);
+    background-clip: text;
+    -webkit-text-stroke: 4px transparent;
+    color: #232d2d;
 }

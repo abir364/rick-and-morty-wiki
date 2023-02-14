@@ -22,6 +22,7 @@
   url('./assets/homepage/Spiral.png'), url('./assets/homepage/Star.png');
   background-position: top, bottom right, bottom;
   background-repeat: no-repeat;
+  min-height: 100vh;
 }
 
 .cast-details-bg {
@@ -64,4 +65,11 @@ body {
 a:-webkit-any-link {
   text-decoration: none;
   color: inherit;
+}
+
+.shared .logo {
+  height: 4vh;
+  width: 10vw;
+  margin-top: 5vh;
+  margin-bottom:5vh;
 }

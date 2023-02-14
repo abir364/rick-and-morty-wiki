@@ -97,3 +97,10 @@
 .char-text {
     width: 240px;
 }
+
+.characters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

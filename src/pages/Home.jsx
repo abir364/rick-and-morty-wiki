@@ -6,6 +6,7 @@ import CardCarousel from "./CardCarousel";
 import Episodes from "./Episodes";
 import Locations from "./Locations";
 
+import logo from "../assets/Logo.png";
 import './Home.css';
 
 const API_URL = "https://rickandmortyapi.com/api";
@@ -30,7 +31,11 @@ const Home = () => {
 
     // renders whatever in there
     return (
-        <div className="home">
+        <div className="home home-page-bg">
+            <div className="shared">
+                <Link to="/"><img className='logo' src={logo} alt="Logo"/></Link>
+                
+            </div>
             <div className="cast-title">
                 <h3>Meet the cast</h3>
                 <Link to="/characters" className="btn"><button className="view-all"> View All</button></Link>

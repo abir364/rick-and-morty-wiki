@@ -9,6 +9,8 @@ import origin from "../assets/cast-details/Icons/PNG/origin.png";
 import re from "../assets/cast-details/Icons/PNG/Redirect.png";
 import loc from "../assets/cast-details/Icons/PNG/Location.png";
 // import epi from "../assets/cast-details/Icons/PNG/Episode(s).png";
+import logo from "../assets/Logo.png";
+
 import './Character.css';
 
 const Character = () => {
@@ -18,6 +20,8 @@ const Character = () => {
 
     const [cast, setCast] = useState({});
     const [id, setId] = useState(useParams().ca);
+
+    // const [epn, setEpn] = useState("");
 
     const [ori, setOri] = useState("");
     const [local, setLocal] = useState("");
@@ -33,6 +37,13 @@ const Character = () => {
         setLocal(json.location.name);
         setEp(json.episode);
     };
+
+    // const fetchEpn = async (api) => {
+    //     const epnResponse = await fetch(api);
+    //     const value = await epnResponse.json();
+    //     console.log(value);
+    //     // setEpn();
+    // };
 
     // console.log("sad",ca);
     // url = "https://rickandmortyapi.com/api/character/"+ca;
@@ -53,9 +64,12 @@ const Character = () => {
 
 
     return (
-        <div>
+        <div className='character-details cast-details-bg'>
             <Link to="/characters"><button className='back-button'>&#x3c;</button></Link>
-
+            <div className="shared">
+                <Link to="/"><img className='logo' src={logo} alt="Logo"/></Link>
+                
+            </div>
             <div className='wrapper'>
                 <div className="left-wrapper">
                     <h1 className='profile-name'>{cast.name}</h1>

@@ -1,12 +1,15 @@
+.character-details {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    align-items: center;
+}
 .wrapper {
     width: 100vw;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    /* background-image:   url("../assets/cast-details/Background.png"), 
-                        url("../assets/cast-details/Star.png");
-    background-repeat: no-repeat; */
-    
+    gap: 10px;
 }
 
 .left-wrapper {
@@ -33,6 +36,8 @@
     grid-template-columns: repeat(3, 10vw);
     grid-template-rows: repeat(6, 12vh);
     gap: 1rem;
+    margin-top: 2vh;
+    margin-bottom: 3vh;
 }
 
 .origin {
@@ -87,4 +92,11 @@
 
 .list::-webkit-scrollbar-thumb {
     background-color: var(--blue);
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }

@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import CharacterCard from "./CharacterCard";
 import SearchIcon from "../assets/search.svg";
 
+import logo from "../assets/Logo.png";
 import './Characters.css';
 
 
@@ -43,7 +44,11 @@ const Characters = () => {
 
     // renders whatever in there
     return (
-        <div className="characters">
+        <div className="characters characters-page-bg">
+            <div className="shared">
+                <Link to="/"><img className='logo' src={logo} alt="Logo"/></Link>
+                
+            </div>
             <Link to="/" className="btn"><button className="back-button">&#x3c;</button></Link>
             {/* search bar */}
             <div className="character-container">
@@ -53,6 +58,11 @@ const Characters = () => {
                         value={searchTerm}
                         onChange={(event) => {
                             setSearchTerm(event.target.value);
+                        }}
+                        onKeyDown={(e) => {
+                            if(e.key === 'Enter') {
+                                searchCharacters(searchTerm)
+                            }
                         }}
                     ></input>
                     <img

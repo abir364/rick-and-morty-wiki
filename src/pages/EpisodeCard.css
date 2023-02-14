@@ -40,3 +40,29 @@
     font-weight: 300;
     font-size: 16px;
 }
+
+@media only screen and (max-width: 600px) {
+    .episode {
+        padding: 10px;
+        max-width: 155px;
+    }
+    
+    .episode {
+        clip-path: polygon(100% 0, 100% 59%, 77% 100%, 0 100%, 0 0);
+    }
+    
+    
+    .episode p, .episode span {
+        font-weight: 300;
+        font-size: 20px;
+        width: 135px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .episodes .slick-slider {
+        width: 75vw;
+        height: 60px;
+    }
+}

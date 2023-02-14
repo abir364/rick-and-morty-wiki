@@ -7,7 +7,7 @@ import LocationCard from "./LocationCard";
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import './Locations.css'
+
 
 const API_URL = "https://rickandmortyapi.com/api";
 
@@ -38,24 +38,24 @@ const Locations = () => {
             {
                 breakpoint: 1024,
                 settings: {
-                    slidesToShow: 3,
+                    slidesToShow: 3.2,
                     slidesToScroll: 1,
-                    infinite: true,
-                    dots: true,
+                    infinite: false,
+                    dots: false,
                     
                 }
             },
             {
                 breakpoint: 600,
                 settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
+                    slidesToShow: 2.5,
+                    slidesToScroll: 1,
                 }
             },
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 2.1,
                     slidesToScroll: 1
                 }
             }

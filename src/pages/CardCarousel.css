@@ -55,6 +55,13 @@
     height: 210px;
 }
 
+@media only screen and (max-width: 600px) {
+    .carousel .slick-slider {
+        width: 75vw;
+        height: 176px;
+    }
+}
+
 .carousel .slick-next.slick-disabled:before, .carousel .slick-prev.slick-disabled:before {
     display: none;
 }

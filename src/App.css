@@ -77,45 +77,6 @@ a:-webkit-any-link {
 }
 
 @media only screen and (max-width: 600px) {
-  .carousel .slick-slider {
-    width: 75vw;
-    height: 176px;
-  }
-
-  .slick-slider {
-    width: 75vw;
-    height: 40px;
-  }
-
-  .episode p {
-    font-weight: 300;
-    font-size: 20px;
-    width: 151px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
-  .episode span {
-    font-weight: 300;
-    font-size: 12px;
-  }
-  .episode {
-    display: grid;
-    grid-template-columns: 170px;
-    grid-template-rows: 21px 28px;
-    padding: 10px;
-    max-width: 165px;
-    background-color: rgba(207, 211, 200, 0.1);
-    position: relative;
-  }
-
-  .episode {
-    border-style: solid;
-    border-width: 1px;
-    border-image: linear-gradient(135deg, #9def00, #14d9e5) 1;
-    clip-path: polygon(100% 0, 100% 53%, 79% 100%, 0 100%, 0 0);
-  }
 
   .shared .logo {
     height: 4vh;

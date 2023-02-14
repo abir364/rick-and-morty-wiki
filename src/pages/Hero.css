@@ -94,3 +94,40 @@
     height: 310px;
     width: 315px;
 }
+
+@media only screen and (max-width: 600px) {
+    .hero h1 {
+        font-size: 64px;
+    }
+    .portal {
+        height: 93px;
+        width: 142px;
+        position: relative;
+        top: -22px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .bubble {
+        position: absolute;
+        top: 54px;
+        left: -14px;
+        height: 161px;
+        width: 130px;
+    }
+    .pill {
+        position: absolute;
+        width: 19px;
+        height: 5px;
+        top: 128px;
+        right: 63px;
+    }
+    
+    .gun {
+        position: absolute;
+        top: 169px;
+        right: -64px;
+        height: 175px;
+        width: 203px;
+        overflow: hidden;
+    }
+}

@@ -41,3 +41,29 @@
     font-weight: 300;
     font-size: 16px;
 }
+
+@media only screen and (max-width: 600px) {
+    .location {
+        padding: 10px;
+        max-width: 155px;
+    }
+    
+    .location {
+        clip-path: polygon(100% 0, 100% 59%, 77% 100%, 0 100%, 0 0);
+    }
+    
+    
+    .location p, .location span {
+        font-weight: 300;
+        font-size: 20px;
+        width: 135px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .locations .slick-slider {
+        width: 75vw;
+        height: 60px;
+    }
+}

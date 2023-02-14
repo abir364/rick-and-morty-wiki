@@ -1,4 +1,4 @@
-.character, .view-all-card {
+/* .character, .view-all-card {
     border-style: solid;
     border-width: 1px;
     border-image: linear-gradient(135deg, var(--green), var(--blue)) 1;
@@ -23,5 +23,5 @@
     border-style: solid;
     border-width: 0 0 65px 50px;
     border-color: transparent transparent var(--blue) transparent;
-}
+} */
 

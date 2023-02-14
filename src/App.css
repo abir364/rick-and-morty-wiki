@@ -4,7 +4,7 @@
 }
 
 :root {
-  --background: #191D29;
+  --background: #191d29;
   --green: #9dfe00;
   --blue: #14d9e5;
   --font-color: white;
@@ -18,22 +18,21 @@
 }
 
 .home-page-bg {
-  background-image: url('./assets/homepage/Background.png'),
-  url('./assets/homepage/Spiral.png'), url('./assets/homepage/Star.png');
+  background-image: url("./assets/homepage/Background.png"),
+    url("./assets/homepage/Spiral.png"), url("./assets/homepage/Star.png");
   background-position: top, bottom right, bottom;
   background-repeat: no-repeat;
-  min-height: 100vh;
 }
 
 .cast-details-bg {
-  background-image: url('./assets/cast-details/Background.png'),
-  url('./assets/cast-details/Star.png');
+  background-image: url("./assets/cast-details/Background.png"),
+    url("./assets/cast-details/Star.png");
   background-repeat: no-repeat;
 }
 
 .characters-page-bg {
-  background-image: url('./assets/cast/Background.png'),
-  url('./assets/cast/Star.png');
+  background-image: url("./assets/cast/Background.png"),
+    url("./assets/cast/Star.png");
   background-repeat: no-repeat;
   background-position: top, bottom;
 }
@@ -48,14 +47,16 @@ body {
   height: 60px;
 }
 
-.slick-next.slick-disabled:before, .slick-prev.slick-disabled:before {
+.slick-next.slick-disabled:before,
+.slick-prev.slick-disabled:before {
   display: none;
 }
 
-.slick-next:before, .slick-prev:before {
+.slick-next:before,
+.slick-prev:before {
   font-size: 40px;
   line-height: 1;
-  opacity: .75;
+  opacity: 0.75;
   color: #ffffff;
 }
 
@@ -72,5 +73,54 @@ a:-webkit-any-link {
   height: 4vh;
   width: 10vw;
   margin-top: 5vh;
-  margin-bottom:5vh;
+  margin-bottom: 5vh;
+}
+
+@media only screen and (max-width: 600px) {
+  .carousel .slick-slider {
+    width: 75vw;
+    height: 176px;
+  }
+
+  .slick-slider {
+    width: 75vw;
+    height: 40px;
+  }
+
+  .episode p {
+    font-weight: 300;
+    font-size: 20px;
+    width: 151px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .episode span {
+    font-weight: 300;
+    font-size: 12px;
+  }
+  .episode {
+    display: grid;
+    grid-template-columns: 170px;
+    grid-template-rows: 21px 28px;
+    padding: 10px;
+    max-width: 165px;
+    background-color: rgba(207, 211, 200, 0.1);
+    position: relative;
+  }
+
+  .episode {
+    border-style: solid;
+    border-width: 1px;
+    border-image: linear-gradient(135deg, #9def00, #14d9e5) 1;
+    clip-path: polygon(100% 0, 100% 53%, 79% 100%, 0 100%, 0 0);
+  }
+
+  .shared .logo {
+    height: 4vh;
+    width: 32vw;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+  }
 }

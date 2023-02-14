@@ -13,6 +13,7 @@
     border-width: 1px;
     border-image: linear-gradient(135deg, #9def00, #14D9E5) 1;
     clip-path: polygon(100% 0, 100% 61%, 90.5% 100%, 0 100%, 0 0);
+    margin-bottom: 50px;
 }
 
 .location::after {

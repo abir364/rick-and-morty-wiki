@@ -8,6 +8,7 @@ import Locations from "./Locations";
 
 import logo from "../assets/Logo.png";
 import './Home.css';
+import Hero from "./Hero";
 
 const API_URL = "https://rickandmortyapi.com/api";
 
@@ -34,8 +35,8 @@ const Home = () => {
         <div className="home home-page-bg">
             <div className="shared">
                 <Link to="/"><img className='logo' src={logo} alt="Logo"/></Link>
-                
             </div>
+            <Hero />
             <div className="cast-title">
                 <h3>Meet the cast</h3>
                 <Link to="/characters" className="btn"><button className="view-all"> View All</button></Link>

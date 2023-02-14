@@ -129,3 +129,16 @@
     -webkit-text-stroke: 4px transparent;
     color: #232d2d;
 }
+
+@media only screen and (max-width: 600px) {
+    .vertical, .vertical-line {
+        display: none;
+    }
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .right-wrapper {
+        grid-template-columns: repeat(3, 25vw);
+    }
+}

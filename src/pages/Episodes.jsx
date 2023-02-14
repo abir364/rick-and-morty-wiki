@@ -40,16 +40,16 @@ const Episodes = () => {
                 settings: {
                     slidesToShow: 3,
                     slidesToScroll: 1,
-                    infinite: true,
-                    dots: true,
+                    infinite: false,
+                    dots: false,
                     
                 }
             },
             {
                 breakpoint: 600,
                 settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
+                    slidesToShow: 2.5,
+                    slidesToScroll: 1,
                 }
             },
             {

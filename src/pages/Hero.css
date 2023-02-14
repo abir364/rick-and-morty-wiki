@@ -1,0 +1,96 @@
+@font-face {
+    font-family: TTT-eb;
+    src: url(../Font/TTTravels-Bold.ttf);
+}
+
+@font-face {
+    font-family: TTT-ieb;
+    src: url(../Font/TTTravels-ExtraBoldItalic.ttf);
+}
+
+.hero {
+    margin-bottom: 70px;
+}
+
+.hero h1 {
+    font-size: 128px;
+}
+
+.white {
+    font-family: TTT-ieb;
+}
+
+.green {
+    font-family: TTT-eb;
+    color:var(--green);
+}
+
+.portal {
+    height: 120px;
+    width: 175px;
+    position: relative;
+    top: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.line-one, .line-two {
+    display: flex;
+}
+
+.line-two {
+    gap: 40px;
+}
+
+.line-one {
+    gap: 10px;
+}
+
+.bottom {
+    display: flex;
+    width: 30vw;
+    gap: 50px;
+    margin-bottom: 100px;
+}
+
+.bottom .watch {
+    font-size: 16px;
+    width: 148px;
+    height: 42px;
+    background-image: linear-gradient(to right, var(--blue) 0%, var(--green) 100%);
+    color: var(--font-color);
+    
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 16px;
+}
+
+.bottom p {
+    color: var(--blue);
+}
+
+.bubble {
+    position: absolute;
+    top: 5px;
+    left: 361px;
+}
+
+.pill {
+    position: absolute;
+    width: 35px;
+    height: 5px;
+    top: 150px;
+    right: 536px;
+}
+
+.gun {
+    position: absolute;
+    top: 182px;
+    right: 317px;
+    height: 310px;
+    width: 315px;
+}

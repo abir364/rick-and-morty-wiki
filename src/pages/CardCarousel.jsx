@@ -33,8 +33,8 @@ const CardCarousel = ({ characters }) => {
             {
                 breakpoint: 600,
                 settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
+                    slidesToShow: 2.6,
+                    slidesToScroll: 1,
                 }
             },
             {

@@ -104,3 +104,87 @@
     align-items: center;
     flex-direction: column;
 }
+
+.character, .view-all-card {
+    border-style: solid;
+    border-width: 1px;
+    border-image: linear-gradient(135deg, var(--green), var(--blue)) 1;
+    padding: 20px;
+    font-family: TTT;
+    clip-path: polygon(100% 0, 100% 80%, 82.5% 100%, 0 100%, 0 0);
+}
+
+.character, .view-all-card {
+    background-color: rgba(207, 211, 200, 0.1);
+    position: relative;
+    max-width: 320px;
+}
+
+.character::after {
+    content: "";
+    position: absolute;
+    bottom:0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 65px 50px;
+    border-color: transparent transparent var(--blue) transparent;
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 95vw;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-bottom: 20px;
+        justify-content: space-around;
+        gap: 10px;
+    }
+    .container .character {
+        max-width: 240px;
+        clip-path: polygon(100% 0, 100% 77%, 78.5% 100%, 0 100%, 0 0);
+        padding: 10px;
+        font-size: 20px;
+    }
+    .container .character img {
+        width: 215px;
+    }
+    .char-text {
+        width: 165px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .container {
+        width: 95vw;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-bottom: 20px;
+        justify-content: space-around;
+        gap: 10px;
+    }
+    .container .character {
+        max-width: 225px;
+        clip-path: polygon(100% 0, 100% 74%, 75% 100%, 0 100%, 0 0);
+        padding: 10px;
+        font-size: 20px;
+    }
+    .container .character img {
+        width: 180px;
+    }
+    .char-text {
+        width: 147px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .search {
+        width: 81%;
+    }
+}
